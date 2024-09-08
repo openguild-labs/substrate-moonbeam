@@ -1,6 +1,9 @@
-# Moonbeam Architecture by OpenGuild
+# Substrate Course | Moonbeam Architecture by OpenGuild
 
 # ![Moonbeam](media/moonbeam_architecture.png)
+
+> [!IMPORTANT]
+> The repository forked from the Moonbeam codebase for the learning and referencing purpose. The codebase might not work functionally. 
 
 ## What Is This?
 
