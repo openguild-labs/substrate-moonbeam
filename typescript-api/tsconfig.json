@@ -1,0 +1,15 @@
+{
+  "extends":"./tsconfig.base.json",
+  "files": [],
+  "references": [
+    {
+      "path": "./src/moonbeam"
+    },
+    {
+      "path": "./src/moonriver"
+    },
+    {
+      "path": "./src/moonbase"
+    }
+  ]
+}
