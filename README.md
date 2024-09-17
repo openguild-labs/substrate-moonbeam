@@ -5,6 +5,31 @@
 > [!IMPORTANT]
 > The repository forked from the Moonbeam codebase for the learning and referencing purpose. The codebase might not work functionally. 
 
+## Table of Contents
+
+- [What Is This?](#what-is-this-)
+-  [Runtime Overview](#runtime-overview)
+      - [Polkadot SDK Pallets](#polkadot-sdk-pallets)
+      - [Frontier Pallets](#frontier-pallets)
+      - [Custom Pallets](#custom-pallets)
+- [Core Runtime Architecture](#core-runtime-architecture)
+    + [Polkadot SDK Pallets](#polkadot-sdk-pallets-1)
+      - [Utility](#utility)
+      - [Balances](#balances)
+      - [Timestamp](#timestamp)
+      - [Transaction Payment](#transaction-payment)
+      - [Randomness](#randomness)
+      - [Parachain Upgrade](#parachain-upgrade)
+      - [Parachain Info](#parachain-info)
+    + [Frontier Pallets](#frontier-pallets-1)
+      - [EVM Chain ID](#evm-chain-id)
+      - [EVM Config](#evm-config)
+      - [Ethereum Config](#ethereum-config)
+    + [Moonbeam Specific Pallets](#moonbeam-specific-pallets)
+      - [Author Inherent](#author-inherent)
+      - [Parachain Staking](#parachain-staking)
+  * [Precompiles](#precompiles)
+
 ## What Is This?
 
 Moonbeam is a Substrate-based blockchain that provides a full Ethereum-like environment. Its runtime architecture is designed to be compatible with Ethereum while leveraging the flexibility and upgradability of Substrate. This step-by-step tutorial will breakdown Moonbeam's architecture and pallet implementation.
