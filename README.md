@@ -369,7 +369,7 @@ Ethereum precompiled contracts offer advanced functionalities, including computa
 
 Moonbeam’s unique precompiles can be accessed using familiar Solidity interfaces through the Ethereum API, allowing seamless interaction with the underlying Substrate interfaces. The following screenshot shows the various folders holding each unique precompile in the Substrate FRAME code repository.
 
-[Precompiles](media/precompiles.png)
+![Precompiles](media/precompiles.png)
 
 In the following subsections, we'll look at categories of precompiles and their exact addresses.
 
