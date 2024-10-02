@@ -484,4 +484,4 @@ The categorized precompiled contracts further enhance network capabilities, offe
 15. [Polkadot Consensus Mechanism Overview](https://polkadot.com/blog/polkadot-consensus-part-1-enhanced-economic-security-via-npos)
 16. [Substrate Networks](https://blog.chungquantin.com/blog/break-down-the-sharded-network-design-of-polkadot)
 
-This list of references covers key resources related to Moonbeam's architecture, its underlying Substrate framework, the broader Polkadot ecosystem, and relevant Ethereum specifications used in this tutorial. It includes official documentation, whitepapers, GitHub repositories, and specific guides that would be valuable for understanding the topics discussed in this README.
+This list of references covers key resources related to Moonbeam's architecture, its underlying Substrate framework, the broader Polkadot ecosystem, and relevant Ethereum specifications used in this tutorial. It includes official documentation, whitepapers, GitHub repositories, and specific guides that would be valuable for understanding the topics discussed.
