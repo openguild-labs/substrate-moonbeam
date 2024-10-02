@@ -43,7 +43,7 @@ This step-by-step tutorial will breakdown Moonbeam's runtime architecture and pa
 
 Before diving into Moonbeam's specific architecture, it's important to understand the basic structure of a Substrate node, which forms the foundation for Moonbeam.
 
-Understanding Moonbeam's architecture requires insight into how Substrate nodes function within the Polkadot parachain ecosystem. Polkadot introduces both network sharding and execution sharding, fundamentally shaping how parachains like Moonbeam operate.
+Understanding Moonbeam's architecture requires insight into how Substrate nodes function within the Polkadot parachain ecosystem. [Polkadot introduces both network sharding and execution sharding](https://blog.chungquantin.com/blog/break-down-the-sharded-network-design-of-polkadot), fundamentally shaping how parachains like Moonbeam operate.
 
 - **Polkadot Parachain Host**: This is the foundational layer of the entire protocol, providing essential functions for building and running parachains. It serves as the backbone for parachain operations within the Polkadot ecosystem.
 - **Parachain Node as WASM Blob**: In the context of Polkadot, a compiled parachain node, such as Moonbeam, is essentially a WebAssembly (WASM) blob. This compact, efficient format allows for cross-platform execution and easy deployment.
