@@ -38,7 +38,27 @@ This step-by-step tutorial will breakdown Moonbeam's runtime architecture and pa
 
 ---
 
-## Step 1: Runtime Overview
+## Basic Structure of a Substrate Node
+
+Before diving into Moonbeam's specific architecture, it's important to understand the basic structure of a Substrate node, which forms the foundation for Moonbeam.
+
+Understanding Moonbeam's architecture requires insight into how Substrate nodes function within the Polkadot parachain ecosystem. Polkadot introduces both network sharding and execution sharding, fundamentally shaping how parachains like Moonbeam operate.
+
+- **Polkadot Parachain Host**: This is the foundational layer of the entire protocol, providing essential functions for building and running parachains. It serves as the backbone for parachain operations within the Polkadot ecosystem.
+- **Parachain Node as WASM Blob**: In the context of Polkadot, a compiled parachain node, such as Moonbeam, is essentially a WebAssembly (WASM) blob. This compact, efficient format allows for cross-platform execution and easy deployment.
+- **Availability Cores**: These WASM blobs (parachain nodes) are assigned to availability cores within the Polkadot network. These cores are responsible for executing parachain logic and maintaining the state of individual parachains.
+- **Parachain-Specific Components**:
+  - **Networking Layer**: Handles communication not just within the parachain, but also cross-chain messaging through Polkadot's XCMP (Cross-Chain Message Passing) protocol.
+  - **Client**: Manages parachain-specific operations while also interfacing with the Polkadot relay chain for consensus and finality.
+  - **Runtime**: Defines the parachain's unique logic, state transition functions, and any custom features (like Moonbeam's Ethereum compatibility).
+
+![Moonbeam Substrate Node Overview](/media/parachain.png)
+
+Moonbeam, as a parachain, builds upon this structure by implementing its Ethereum-compatible environment within the Substrate framework and Polkadot ecosystem. This allows Moonbeam to leverage Polkadot's security and interoperability while providing a familiar environment for Ethereum developers.
+
+---
+
+## Runtime Overview
 
 Moonbeam's runtime is built using Substrate's [FRAME](https://docs.substrate.io/reference/frame-pallets/), which allows for a modular and upgradable architecture. The runtime is composed of various components called "pallets", each responsible for specific functionality. Key components of Moonbeam's runtime architecture are as follows.
 
@@ -74,7 +94,7 @@ These are pallets that implement unique features and governance mechanisms. Thes
 
 ---
 
-## Step 2: Core Runtime Architecture
+## Core Runtime Architecture
 
 `runtime/moonbeam/src/lib.rs` defines the Moonbeam runtime and implements the necessary pallets. This file handles the fundamental blockchain operations. Now let's take a look at how specific pallets are implemented.
 
@@ -349,7 +369,7 @@ These core runtime pallets ensure that local and cross-chain transactions are ex
 
 ---
 
-## Step 3: Precompiles
+## Precompiles
 
 Precompiles refer to specialized functions or contracts that are hardcoded into the blockchain protocol rather than being written in any high-level smart contract language. These precompiles are executed natively by the EVM for performance-critical operations.
 
@@ -441,3 +461,26 @@ The precompiled contracts on Moonbeam are categorized by their addresses and the
 The Moonbeam runtime architecture is a sophisticated blend of Substrate and Ethereum-compatible components, allowing for extensive functionality, flexibility, and security within the Moonbeam network. By integrating various pallets and precompiled contracts, Moonbeam provides access to essential features like staking, governance, XCM-related functions, and secure randomness generation.
 
 The categorized precompiled contracts further enhance network capabilities, offering tailored functionalities specific to Moonbeam, as well as compatibility with established Ethereum standards. This structure enables developers to leverage familiar tools and APIs while benefiting from the advanced features of Substrate. Overall, the Moonbeam runtime is designed to optimize performance and adaptability, ensuring a robust environment for decentralized applications and parachain operations. ​
+
+---
+
+## References
+
+1. [Moonbeam Documentation](https://docs.moonbeam.network/)
+2. [Substrate Documentation](https://docs.substrate.io/)
+3. [Polkadot Litepaper](https://assets.polkadot.network/Polkadot-lightpaper.pdf)
+4. [Moonbeam GitHub Repository](https://github.com/moonbeam-foundation/moonbeam)
+5. [Substrate GitHub Repository](https://github.com/paritytech/substrate)
+6. [Polkadot GitHub Repository](https://github.com/paritytech/polkadot)
+7. [Frontier GitHub Repository](https://github.com/polkadot-evm/frontier)
+8. [Parachain Development Guide](https://wiki.polkadot.network/docs/build-pdk)
+9. [FRAME Pallets Documentation](https://docs.substrate.io/reference/frame-pallets/)
+10. [WebAssembly (WASM) Specification](https://wiki.polkadot.network/docs/learn-wasm)
+11. [Cross-Chain Message Passing (XCMP) Protocol Documentation](https://wiki.polkadot.network/docs/learn-xcm)
+12. [Ethereum Virtual Machine (EVM) Specification](https://ethereum.org/en/developers/docs/evm/)
+13. [Moonbeam Precompiles Documentation](https://docs.moonbeam.network/builders/ethereum/precompiles/overview/)
+14. [Polkadot Parachain Host Specification](https://paritytech.github.io/polkadot-sdk/book/index.html)
+15. [Polkadot Consensus Mechanism Overview](https://polkadot.com/blog/polkadot-consensus-part-1-enhanced-economic-security-via-npos)
+16. [Substrate Networks](https://blog.chungquantin.com/blog/break-down-the-sharded-network-design-of-polkadot)
+
+This list of references covers key resources related to Moonbeam's architecture, its underlying Substrate framework, the broader Polkadot ecosystem, and relevant Ethereum specifications used in this tutorial. It includes official documentation, whitepapers, GitHub repositories, and specific guides that would be valuable for understanding the topics discussed in this README.
