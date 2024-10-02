@@ -8,6 +8,7 @@
 ## Table of Contents
 
 - [What Is This?](#what-is-this-)
+- [Basic Structure of Substrate Node](#basic-structure-of-a-substrate-node)
 - [Runtime Overview](#runtime-overview)
   - [Polkadot SDK Pallets](#polkadot-sdk-pallets)
   - [Frontier Pallets](#frontier-pallets)
